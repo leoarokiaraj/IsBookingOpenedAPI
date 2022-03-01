@@ -1,5 +1,6 @@
-﻿
---------------------------------------DOCKER------------------------------------------------------------------------
+# IsBookingOpenedAPI
+
+- #### DOCKER Setup
 
 Use below command for docker build
 
@@ -10,7 +11,7 @@ Docker Run Local
 	docker run --env-file ./env.list -d -p 7788:8081 --name is-booking-opened-cont web:is-booking-opened-api-doc
 
 
---------------------------------------PSQL------------------------------------------------------------------------
+- #### PSQL Setup
 For logging into heroku postgresql
 
 Use the below Command
@@ -42,7 +43,7 @@ Sample Alter Sequence
 	ALTER SEQUENCE trigger_trigger_id_seq RESTART WITH 1;
 
 
---------------------------------------HEROKU------------------------------------------------------------------------
+- #### HEROKU Setup
 Heroku deploy type 1
 
 	heroku Login
