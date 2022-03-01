@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:3124",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IsBookingOpenedAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "IsBookingOpenedServiceURL": "http://localhost:3001/",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DiscordAPI": "https://discord.com/api/webhooks/940524783085424640/1h2HmYcQqfbkJDF6z-hb7j3DmVQ9Qa1MtOsAXU9yt2QX4uq4mW5ORCoxLxuGSNFMrk3Z",
+        "PollingDelay": "5000"
+      },
+      "applicationUrl": "http://localhost:5009",
+      "dotnetRunMessages": true
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
