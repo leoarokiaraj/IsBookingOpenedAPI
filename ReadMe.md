@@ -12,34 +12,41 @@ Docker Run Local
 
 
 - #### PSQL Setup
+
 For logging into heroku postgresql
 
 Use the below Command
-psql -h {HOSTNAME} -p {PORTNUMBER} -U {USERNAME} -W  {DB}
+
+	psql -h {HOSTNAME} -p {PORTNUMBER} -U {USERNAME} -W  {DB}
 
 
 Create table
+
  	CREATE TABLE IF NOT EXISTS trigger 
 		(trigger_id serial, movie_name VARCHAR(255), theater_name VARCHAR(255), theater_id VARCHAR(50),
 		trigger_url VARCHAR(255) , trigger_status smallint, trigger_date VARCHAR(255),trigger_time VARCHAR(255),
 		created_on TIMESTAMP,updated_on TIMESTAMP);
 
 Sample Insert
+
  	INSERT INTO trigger (movie_name,theater_name,theater_id,trigger_url,trigger_status,trigger_date,trigger_time,created_on,updated_on) 
 	VALUES ('fir','PVR','VRCM',
 	'fir-chennai/movie-chen-ET00321951-MT/20220216',0,'2022-02-11', 
 	'12:00 AM','2022-02-11 04:30:02','2022-02-13 04:30:01');
 
 Sample Update
+
  	UPDATE trigger SET theater_id ='JACM' WHERE trigger_id = 1;
 
 	UPDATE trigger SET trigger_url='veerame-vaagai-soodum-chennai/movie-chen-ET00314800-MT/20220215',
 	theater_id ='AGSM' , trigger_time = '8:00 PM' WHERE trigger_id = 2;
 
 Sample Delete
+
  	DELETE FROM trigger;
 
 Sample Alter Sequence
+
 	ALTER SEQUENCE trigger_trigger_id_seq RESTART WITH 1;
 
 
