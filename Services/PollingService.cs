@@ -98,6 +98,7 @@ namespace WebAPIPostgresql.Services
                         {
                             continue;
                         }
+                        showDettail?.data_date_time.RemoveAll(date => date == null);
                         foreach (var date in showDettail?.data_date_time)
                         {
                             if (DateTime.Parse(date) > (DateTime.Parse(triggerItem?.trigger_time)))
